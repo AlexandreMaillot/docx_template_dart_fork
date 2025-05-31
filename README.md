@@ -1,4 +1,9 @@
+# ⚠️ This repository is a fork maintained by Alexandre Maillot
+
+This project is a fork of the original abandoned repository. The maintained version is available here: https://github.com/alexandremaillot/docx_template_dart_fork
+
 # docx_template_dart
+
 A Docx template engine
 
 Generates docx from template file.
@@ -17,22 +22,20 @@ the TAG field can be one from the following list: list, table, text, plain, img
 the TITLE field is the name of the tag, which will be passed to constructors of the Content classes
 
 For example:
-If we set the tag equal to 'list' and the title equal to 'cars', then we must use the corresponding 
-```ListContent ('cars', [*here contents*])```
+If we set the tag equal to 'list' and the title equal to 'cars', then we must use the corresponding
+`ListContent ('cars', [*here contents*])`
 
 For the 'text' tag and the title equal to 'block_name' we use:
-```TextContent('block_name', 'Example text')```
+`TextContent('block_name', 'Example text')`
 etc.
 
-
 List of supported tags:
-+ list - a list, which can contain the following tags: text, plain
-+ table - table row
-+ text - a simple text field
-+ plain - a block that can contain text, tables, images, lists, which can be repeated several times if you wrap it in a list tag
-+ img - block with a picture, can be used in text or inside tables
 
-
+- list - a list, which can contain the following tags: text, plain
+- table - table row
+- text - a simple text field
+- plain - a block that can contain text, tables, images, lists, which can be repeated several times if you wrap it in a list tag
+- img - block with a picture, can be used in text or inside tables
 
 # Example
 
@@ -40,9 +43,9 @@ List of supported tags:
   final f = File("template.docx");
   final docx = await DocxTemplate.fromBytes(await f.readAsBytes());
 
-  /* 
+  /*
     Or in the case of Flutter, you can use rootBundle.load, then get bytes
-    
+
     final data = await rootBundle.load('lib/assets/users.docx');
     final bytes = data.buffer.asUint8List();
 
@@ -144,7 +147,8 @@ List of supported tags:
 ```
 
 DocxTemplate.generate takes two additional parameters:
-1) tagPolicy set rules to remove content control tags from the document
-2) imagePolicy
-Where ImagePolicy.remove - deletes the image if the ImageContent object is not provided
-ImagePolicy.save - leaves the original images from the template if the ImageContent object is not specified
+
+1. tagPolicy set rules to remove content control tags from the document
+2. imagePolicy
+   Where ImagePolicy.remove - deletes the image if the ImageContent object is not provided
+   ImagePolicy.save - leaves the original images from the template if the ImageContent object is not specified
