@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 
-import 'package:docx_template/src/model.dart';
+import 'package:docx_template_fork/src/model.dart';
 import 'package:pdf/widgets.dart' as pw;
 
 abstract class PdfView<T extends Content?> {

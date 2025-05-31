@@ -1,6 +1,6 @@
 import 'package:archive/archive.dart';
-import 'package:docx_template/docx_template.dart';
-import 'package:docx_template/src/view_manager.dart';
+import 'package:docx_template_fork/docx_template.dart';
+import 'package:docx_template_fork/src/view_manager.dart';
 
 import 'docx_entry.dart';
 

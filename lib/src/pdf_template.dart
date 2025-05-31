@@ -1,13 +1,14 @@
-import 'package:docx_template/src/model.dart';
-import 'package:docx_template/src/template.dart';
+import 'dart:convert';
+import 'dart:io';
+import 'dart:typed_data';
+
+import 'package:archive/archive.dart';
+import 'package:collection/collection.dart';
+import 'package:docx_template_fork/src/model.dart';
+import 'package:docx_template_fork/src/template.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:xml/xml.dart';
-import 'dart:io';
-import 'dart:typed_data';
-import 'package:archive/archive.dart';
-import 'dart:convert';
-import 'package:collection/collection.dart';
 
 class PdfTemplate {
   final DocxTemplate docxTemplate;
@@ -172,7 +173,6 @@ class PdfTemplate {
     // Lire le header
     final headerParagraphs = header.findAllElements('w:p');
     for (var p in headerParagraphs) {
-  
       final sdt = p.findElements('w:sdt').firstOrNull;
       if (sdt != null) {
         final alias = sdt.findElements('w:alias').firstOrNull?.value;
@@ -204,7 +204,6 @@ class PdfTemplate {
       // Chercher le footer (dernier paragraphe non vide)
       footer = text;
     }
-
 
     return DocxContent(
       header: headerText,

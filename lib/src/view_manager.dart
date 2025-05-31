@@ -3,9 +3,9 @@ library docx_view;
 import 'dart:collection';
 
 import 'package:collection/collection.dart' show IterableExtension;
-import 'package:docx_template/docx_template.dart';
-import 'package:docx_template/src/docx_entry.dart';
-import 'package:docx_template/src/template.dart';
+import 'package:docx_template_fork/docx_template.dart';
+import 'package:docx_template_fork/src/docx_entry.dart';
+import 'package:docx_template_fork/src/template.dart';
 import 'package:path/path.dart' as path;
 import 'package:xml/xml.dart';
 

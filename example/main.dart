@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:docx_template/docx_template.dart';
+import 'package:docx_template_fork/docx_template.dart';
 
 ///
 /// Read file template.docx, produce it and save
