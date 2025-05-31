@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:docx_template/docx_template.dart';
-import 'package:docx_template/src/template.dart';
+import 'package:docx_template_fork/docx_template_fork.dart';
+import 'package:docx_template_fork/src/template.dart';
 import 'package:test/test.dart';
 
 void main() {

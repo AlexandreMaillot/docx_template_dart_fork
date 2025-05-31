@@ -1,7 +1,8 @@
-name: docx_template
+name: docx_template_fork
 description: A Docx template engine.
-version: 0.4.1
-homepage: https://github.com/PavelS0/docx_template_dart
+version: 0.5.0
+homepage: https://github.com/alexandremaillot/docx_template_dart
+
 environment:
   sdk: ">=3.0.0 <4.0.0"
 
